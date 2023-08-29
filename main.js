@@ -15,8 +15,8 @@ const timer = function() {
     idInterval = setInterval(start, 50);
   } else {
     isPaused = !isPaused;
-
-
+    mainBtn.innerHTML = "Start";
+    clearInterval(idInterval);
   }
 }
 
@@ -27,8 +27,8 @@ const start = () => {
 
 const reset = () => {
   time = 0;
-  clearInterval(idInterval);
   mainBtn.innerHTML = "Start";
+  clearInterval(idInterval);
   isPaused = false;
   timeDiv.innerHTML = "---";
 }
